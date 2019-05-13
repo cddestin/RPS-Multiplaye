@@ -1,0 +1,24 @@
+.latest__item {
+
+    /* mobile first */
+     /* don't need to specify columns because everything is 100% wide */
+     /* be sure you're using min-width MQ's */
+  
+     /* tablet */
+     /* 2 column layout */
+  
+    @include media(37.5em) {
+          /* you can use your variable here */
+      @include span-columns(6);       /* I don't use "4 of 8", I assume grid is always 12  */
+      @include omega(2n);
+    }
+  
+     /* desktop */
+     /* 3 column layout */
+  
+    @include media(64em) {          /* you can use your variable here */
+      @include omega-reset(2n);     /* only have to reset previous MQ omega value */
+      @include span-columns(4);     /* I don't use "4 of 12", I assume grid is always 12 */
+      @include omega(3n);
+    }
+  }
